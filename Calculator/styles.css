@@ -1,0 +1,74 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.calculator {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.display {
+  width: calc(100% - 20px);
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 2em;
+  text-align: right;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+button {
+  padding: 20px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.operator {
+  background-color: #ff9f43;
+  color: #fff;
+}
+
+.operator:active {
+  background-color: #ff7f0e;
+}
+
+button[value="="] {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+button[value="="]:active {
+  background-color: #27ae60;
+}
+
+button[value="C"] {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+button[value="C"]:active {
+  background-color: #c0392b;
+}
